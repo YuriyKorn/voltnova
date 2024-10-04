@@ -1,0 +1,234 @@
+@import 'variables.scss';
+
+%app-inner-width {
+  width: $app-inner-width;
+  max-width: $app-max-width;
+}
+
+%padding-header {
+  padding-top: $header-height;
+
+  @media (max-width: $sm-width) {
+    padding-top: $header-height-sm;
+  }
+}
+
+%inner-container {
+  @extend %app-inner-width;
+  padding: 2rem 0;
+  margin: 0 auto;
+
+  @media (max-width: $sm-width) {
+    padding: 1rem 0;
+  }
+}
+
+%before-line {
+  content: '';
+  display: block;
+  height: 5px;
+  width: 150px;
+  background: $color-primary;
+  border-radius: 2px;
+}
+
+%button {
+  // color: $color-bg-main;
+  // background: $color-primary;
+  color: $color-text-light;
+  background: $color-red;
+  border-radius: $border-radius-main;
+  padding: 0.75rem 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: $main-transition;
+  font-size: 1.5rem;
+
+  @media (max-width: $md-width) {
+    font-size: 1.5rem;
+  }
+  @media (max-width: $sm-width) {
+    font-size: 1.25rem;
+  }
+
+  &:active {
+    // background: $color-primary-dark;
+    background: $color-blue;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background: $color-blue;
+    }
+  }
+}
+
+// %modal {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100vw;
+//   height: 100vh;
+//   background: $color-main-light;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// %input {
+//   padding: 0.75rem 1rem;
+//   width: 0;
+//   flex-grow: 1;
+//   background: $color-light;
+//   color: $color-main-light;
+//   font-size: 2rem;
+
+//   &::placeholder {
+//     color: rgba($color-main, 0.3);
+//   }
+
+//   @media (max-width: $md-width) {
+//     font-size: 1.5rem;
+//   }
+//   @media (max-width: $sm-width) {
+//     font-size: 1.25rem;
+//     padding: 0.5rem;
+//   }
+// }
+
+// %auth-form {
+//   margin: 2rem 0 3rem 0;
+
+//   @media (max-width: $sm-width) {
+//     margin: 1rem 0 2rem 0;
+//   }
+// }
+
+// %auth-form-row {
+//   display: grid;
+//   grid-template-columns: 1fr 1fr;
+//   gap: 1.5rem;
+//   margin-bottom: 1.5rem;
+
+//   @media (max-width: $sm-width) {
+//     grid-template-columns: 1fr;
+//     gap: 1rem;
+//     margin-bottom: 1rem;
+//   }
+// }
+
+// %hover-to-secondary-color {
+//   &:active {
+//     color: $color-secondary;
+//   }
+//   @media (hover: hover) and (pointer: fine) {
+//     &:hover {
+//       color: $color-secondary;
+//     }
+//   }
+// }
+
+// %hover-to-secondary-color-light {
+//   &:active {
+//     color: $color-secondary-light;
+//   }
+//   @media (hover: hover) and (pointer: fine) {
+//     &:hover {
+//       color: $color-secondary-light;
+//     }
+//   }
+// }
+
+// %hover-bg-to-secondary-color {
+//   &:active {
+//     background: $color-secondary;
+//   }
+//   @media (hover: hover) and (pointer: fine) {
+//     &:hover {
+//       background: $color-secondary;
+//     }
+//   }
+// }
+
+// %hover-bg-over-secondary-color {
+//   &:active {
+//     background: $color-secondary-dark;
+//   }
+//   @media (hover: hover) and (pointer: fine) {
+//     &:hover {
+//       background: $color-secondary-dark;
+//     }
+//   }
+// }
+
+// %hover-over-secondary-color {
+//   &:active {
+//     color: $color-secondary-dark;
+//   }
+
+//   @media (hover: hover) and (pointer: fine) {
+//     &:hover {
+//       color: $color-secondary-dark;
+//     }
+//   }
+// }
+
+// %hover-over-secondary-color-light {
+//   &:active {
+//     color: $color-secondary;
+//   }
+
+//   @media (hover: hover) and (pointer: fine) {
+//     &:hover {
+//       color: $color-secondary;
+//     }
+//   }
+// }
+
+// %hover-over-offset-color {
+//   &:active {
+//     color: scale-color($color-offset, $lightness: -30%);
+//   }
+
+//   @media (hover: hover) and (pointer: fine) {
+//     &:hover {
+//       color: scale-color($color-offset, $lightness: -30%);
+//     }
+//   }
+// }
+
+// %hover-over-offset-bg {
+//   &:active {
+//     background-color: scale-color($color-offset, $lightness: -30%);
+//   }
+
+//   @media (hover: hover) and (pointer: fine) {
+//     &:hover {
+//       background-color: scale-color($color-offset, $lightness: -30%);
+//     }
+//   }
+// }
+
+// %custom-scrollbar {
+//   // Custom scrollbar
+//   /* width */
+//   &::-webkit-scrollbar {
+//     width: 0.5rem;
+//   }
+//   /* Track */
+//   &::-webkit-scrollbar-track {
+//     background: $color-main-dark;
+//     border-top-right-radius: 3px;
+//     border-bottom-right-radius: 3px;
+//   }
+//   /* Handle */
+//   &::-webkit-scrollbar-thumb {
+//     background: $color-secondary;
+//     border-top-right-radius: 3px;
+//     border-bottom-right-radius: 3px;
+//   }
+//   /* Handle on hover */
+//   &::-webkit-scrollbar-thumb:hover {
+//     background: $color-secondary-dark;
+//   }
+// }

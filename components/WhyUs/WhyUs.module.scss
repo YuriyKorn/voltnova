@@ -1,0 +1,66 @@
+@import '../../utils/css/shared.scss';
+
+.why-us {
+  &::before {
+    @extend %before-line;
+    width: 80%;
+    height: 1px;
+    background-color: $color-text-main;
+    opacity: 0.25;
+    margin: 2rem auto;
+  }
+}
+
+.why-us__inner {
+  @extend %inner-container;
+}
+
+.why-us__heading {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+  color: $color-blue;
+}
+
+.why-us__cards {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.why-us__card {
+  width: 350px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $color-bg-dark;
+  border: 2px solid rgba(#fff, 0.08);
+  border-radius: $border-radius-lg;
+
+  h4 {
+    margin-bottom: 2rem;
+    color: $color-text-light;
+    font-size: 1.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 1.15rem;
+    text-align: center;
+    line-height: 1.25;
+  }
+}
+
+.why-us__image-container {
+  height: 100px;
+  margin-bottom: 2rem;
+
+  img {
+    height: 100%;
+    width: auto;
+  }
+}

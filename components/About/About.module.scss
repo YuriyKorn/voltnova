@@ -1,0 +1,55 @@
+@import '../../utils/css/shared.scss';
+
+.about {
+  display: block;
+}
+
+.about__inner {
+  @extend %inner-container;
+}
+
+.about__intro {
+  margin-bottom: 4rem;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: $sm-width) {
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+}
+
+.about__img-container {
+  width: 50%;
+  margin-right: 3rem;
+  flex-shrink: 0;
+
+  @media (max-width: $sm-width) {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.about__txt-container {
+  h4 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: $color-blue;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  p {
+    font-size: 1.15rem;
+    line-height: 1.25;
+
+    @media (max-width: $sm-width) {
+      text-align: center;
+    }
+  }
+}

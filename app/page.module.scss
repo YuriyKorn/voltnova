@@ -1,0 +1,7 @@
+@import '../utils/css/shared.scss';
+
+.main {
+  @extend %padding-header;
+
+  // flex-grow: 1;
+}

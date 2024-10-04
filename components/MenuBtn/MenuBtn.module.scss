@@ -1,0 +1,79 @@
+@import '../../utils/css/shared.scss';
+
+.menu-btn {
+  display: none;
+  position: relative;
+  height: 1.5rem;
+  width: 2rem;
+  margin-left: auto;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: $menu-btn-transition;
+
+  @media (max-width: $sm-width) {
+    display: block;
+  }
+
+  @mixin hover {
+    .menu-btn-line {
+      background: $color-primary;
+    }
+  }
+  &:active {
+    @include hover;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @include hover;
+    }
+  }
+}
+
+.menu-btn-line {
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  height: 6px;
+  background: $color-light;
+  border-radius: 3px;
+
+  &:first-child {
+    top: 0px;
+  }
+  &:last-child {
+    top: 20px;
+  }
+
+  &:first-child,
+  &:last-child {
+    // transition-property: top, transform;
+    // transition-duration: 0.3s, 0.3s;
+    // transition-delay: 0s, 0.3s;
+    transition: background-color 0.15s linear, top 0.15s linear 0.15s, transform 0.15s linear 0s;
+  }
+  &:nth-child(2) {
+    transition: background-color 0.15s linear, opacity 0s linear 0.2s;
+  }
+}
+
+.menu-btn_close {
+  .menu-btn-line {
+    &:first-child {
+      top: 10px;
+      transform: rotate(45deg);
+    }
+    &:nth-child(2) {
+      opacity: 0;
+    }
+    &:last-child {
+      top: 10px;
+      transform: rotate(-45deg);
+    }
+
+    &:first-child,
+    &:last-child {
+      transition: background-color 0.15s linear, top 0.15s linear 0s, transform 0.15s linear 0.15s !important;
+    }
+  }
+}

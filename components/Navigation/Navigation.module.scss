@@ -1,0 +1,100 @@
+@import '../../utils/css/shared.scss';
+
+.navigation {
+  flex-grow: 1;
+
+  @media (max-width: $lg-width) {
+    margin: 0 0 0 2vw;
+  }
+  @media (max-width: $sm-width) {
+    display: block;
+    position: absolute;
+    top: $header-height-sm;
+    left: 0;
+    width: 100%;
+    height: 0;
+    margin: 0;
+    // overflow-y: scroll;
+    overflow-y: auto;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+
+    @media (max-width: $sm-width) {
+      display: block;
+    }
+  }
+}
+
+.navigation_open {
+  @media (max-width: $sm-width) {
+    height: calc(100dvh - #{$header-height-sm});
+  }
+}
+
+.navigation__item {
+  margin: 0 25px;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: $main-transition;
+
+  @mixin hover {
+    color: $color-primary;
+  }
+  &:active {
+    @include hover;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @include hover;
+    }
+  }
+
+  @media (max-width: $lg-width) {
+    font-size: 1rem;
+    margin: 0 15px;
+  }
+  @media (max-width: $md-width) {
+    margin: 0 10px;
+  }
+
+  @media (max-width: $sm-width) {
+    position: relative;
+    left: -100%;
+    margin: 0;
+
+    height: calc(((100dvh - #{$header-height-sm}) / #{$nav-items-amount}));
+    background: $color-bg-main;
+    border-bottom: 3px solid $color-primary;
+    font-size: 1.75rem;
+    transition-property: left, height, color;
+    transition-duration: 0.15s, 0.15s, 0.15s;
+  }
+
+  a {
+    @media (max-width: $sm-width) {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.navigation__item_open {
+  @media (max-width: $sm-width) {
+    left: 0;
+  }
+}
+
+@for $x from 1 through $nav-items-amount {
+  .navigation__item:nth-child(#{$x}) {
+    @media (max-width: $sm-width) {
+      transition-delay: $x * 0.05s, 0s, 0s;
+    }
+  }
+}

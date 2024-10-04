@@ -1,0 +1,57 @@
+// colors
+$color-bg-main: #0c1020;
+$color-bg-dark: scale-color($color-bg-main, $lightness: -25%);
+// $color-bg-light: scale-color($color-bg-main, $lightness: 20%);
+$color-text-main: #b8b8b8;
+$color-text-light: #fff;
+// $color-main-light: scale-color($color-main, $lightness: 20%);
+// $color-main-dark: scale-color($color-main, $lightness: -50%);
+// $color-main-dark-shadow: scale-color($color-main, $lightness: -30%);
+$color-primary: #eeff00;
+// $color-blue: #0b68b8;
+$color-blue: #0089ff;
+// $color-blue: #3a9dd0;
+$color-red: #cd373a;
+$color-green: #5ae045;
+// $color-primary-dark: scale-color($color-primary, $lightness: -30%);
+// $color-primary-light: scale-color($color-primary, $lightness: 30%);
+// $color-secondary: #b80cb8;
+$color-light: #f6f6f6;
+// $color-light: #f1f1f1;
+// $color-dark: #121212;
+// $color-grey: #9b9b9b;
+// $color-invalid: #fb742d;
+// $color-invalid: #f47174;
+// $color-invalid-bg: #ea959f;
+// $color-invalid-bg: #dc3545;
+
+// metrics
+$xs-width: 500px;
+$sm-width: 767px;
+$md-width: 992px;
+$lg-width: 1200px;
+
+$app-max-width: 1200px;
+$app-inner-width: 90%;
+
+$header-height: 80px;
+$header-height-sm: 60px;
+
+$border-radius-main: 5px;
+$border-radius-lg: 25px;
+// $border-radius-sm: 3px;
+// $border-bottom-width-mob-nav-item: 3px;
+
+// amounts
+$nav-items-amount: 5;
+
+// z-i
+$header-z-i: 9;
+// $spinner-z-i: 11;
+// $modal-z-i: 11;
+// $not-found-z-i: 11;
+
+// transitions
+$main-transition: all 0.15s linear;
+$menu-btn-transition: all 0.3s ease-out;
+// $mobile-menu-transition: all 0.3s ease-out;

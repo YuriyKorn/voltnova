@@ -1,0 +1,50 @@
+@import '../../utils/css/shared.scss';
+
+.header {
+  position: fixed;
+  width: 100%;
+  height: $header-height;
+  z-index: $header-z-i;
+  background-color: rgba($color-bg-main, 1);
+  border-bottom: 1px solid $color-primary;
+
+  @media (max-width: $sm-width) {
+    height: $header-height-sm;
+  }
+}
+
+.header__inner {
+  @extend %app-inner-width;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.header__logo {
+  display: flex;
+  height: 75%;
+  transition: $main-transition;
+  cursor: pointer;
+
+  @media (max-width: $md-width) {
+    height: 50%;
+  }
+  @media (max-width: $sm-width) {
+    height: 70%;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  &:active {
+    transform: scale(1.1);
+  }
+}

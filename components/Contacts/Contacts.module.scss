@@ -1,0 +1,117 @@
+@import '../../utils/css/shared.scss';
+
+.contacts {
+  &::before {
+    @extend %before-line;
+    width: 80%;
+    height: 1px;
+    background-color: $color-text-main;
+    opacity: 0.25;
+    margin: 2rem auto;
+  }
+
+  div {
+    border: 0 !important;
+    outline: 0 !important;
+  }
+}
+
+.contacts__inner {
+  @extend %inner-container;
+}
+
+.contacts__heading {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+  color: $color-blue;
+}
+
+.contacts__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  @media (max-width: $md-width) {
+    gap: 1rem;
+  }
+
+  @media (max-width: $sm-width) {
+    flex-direction: column;
+  }
+}
+
+.contacts__contacts {
+  @media (max-width: $sm-width) {
+    max-width: 75%;
+  }
+}
+
+.contacts__contact {
+  margin-bottom: 1rem;
+}
+
+.contacts__link {
+  display: flex;
+  align-items: center;
+}
+
+.contacts__link-icon {
+  margin-right: 1rem;
+  font-size: 2rem;
+  color: $color-blue;
+}
+
+.contacts__link-text {
+  color: $color-text-light;
+  font-size: 1.25rem;
+  max-width: 350px;
+  transition: $main-transition;
+
+  @mixin hover {
+    color: $color-primary;
+  }
+  &:active {
+    @include hover;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @include hover;
+    }
+  }
+
+  @media (max-width: $sm-width) {
+    width: 70%;
+  }
+}
+
+.contacts__map {
+  width: 60%;
+  height: 50vh;
+  flex-shrink: 0;
+
+  @media (max-width: $sm-width) {
+    width: 100%;
+  }
+}
+
+.contacts__map-marker {
+  animation: markerAnimation linear 5s infinite;
+}
+
+@keyframes markerAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(10deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

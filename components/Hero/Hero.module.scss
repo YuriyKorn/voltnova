@@ -1,0 +1,67 @@
+@import '../../utils/css/shared.scss';
+
+.hero {
+  display: flex;
+  min-height: calc(100dvh - #{$header-height});
+  background-image: url('../../assets/bg/hero-bg.png');
+  background-position: center;
+  background-size: cover;
+
+  @media (max-width: $md-width) {
+    height: calc(100dvh - #{$header-height-sm});
+  }
+}
+
+.hero__inner {
+  @extend %inner-container;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__heading {
+  margin-bottom: 4rem;
+  color: $color-primary;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: bold;
+
+  // -webkit-text-stroke: 1px red;
+
+  &::before {
+    @extend %before-line;
+    margin: 0 auto 2rem;
+
+    @media (max-width: $sm-width) {
+      margin-bottom: 1rem;
+      margin-inline: auto;
+    }
+  }
+
+  // @media (max-width: $lg-width) {
+  //   font-size: 4rem;
+  // }
+
+  @media (max-width: $sm-width) {
+    font-size: 3rem;
+  }
+}
+
+.hero__description {
+  max-width: 750px;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  text-align: center;
+
+  @media (max-width: $sm-width) {
+    font-size: 1.25rem;
+  }
+}
+
+.hero__btn {
+  @extend %button;
+
+  background: #cd373a;
+}

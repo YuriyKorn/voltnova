@@ -1,0 +1,85 @@
+@import '../../utils/css/shared.scss';
+
+.service {
+  &::before {
+    @extend %before-line;
+    width: 80%;
+    height: 1px;
+    background-color: $color-text-main;
+    opacity: 0.25;
+    margin: 2rem auto;
+  }
+}
+
+.service__inner {
+  @extend %inner-container;
+}
+
+.service__heading {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+  color: $color-blue;
+}
+
+.services {
+  display: block;
+}
+
+.service__item {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  margin-bottom: 2rem;
+
+  &:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  @media (max-width: $md-width) {
+    gap: 2rem;
+  }
+
+  @media (max-width: $sm-width) {
+    flex-direction: column-reverse;
+
+    &:nth-child(even) {
+      flex-direction: column-reverse;
+    }
+  }
+}
+
+.service__img-container {
+  width: 50%;
+  flex-shrink: 0;
+
+  @media (max-width: $sm-width) {
+    width: 100%;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: contain;
+  }
+}
+
+.service__item-heading {
+  margin-bottom: 2rem;
+  text-align: center;
+  color: $color-text-light;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.service__item-description {
+  font-size: 1.25rem;
+  line-height: 1.25;
+  text-align: center;
+
+  @media (max-width: $md-width) {
+    font-size: 1.15rem;
+  }
+}

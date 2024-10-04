@@ -1,0 +1,81 @@
+@import '../../utils/css/shared.scss';
+
+.how-to-buy {
+  &::before {
+    @extend %before-line;
+    width: 80%;
+    height: 1px;
+    background-color: $color-text-main;
+    opacity: 0.25;
+    margin: 2rem auto;
+  }
+}
+
+.how-to-buy__inner {
+  @extend %inner-container;
+}
+
+.how-to-buy__heading {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+  color: $color-blue;
+}
+
+.how-to-buy__steps {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.how-to-buy__step {
+  width: 275px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $color-bg-dark;
+  border: 2px solid rgba(#fff, 0.08);
+  border-radius: $border-radius-lg;
+
+  @media (max-width: $sm-width) {
+    padding: 1rem;
+  }
+}
+
+.how-to-buy__step-number {
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  font-weight: bold;
+  // color: hsl(120, 100%, 59%);
+
+  @media (max-width: $sm-width) {
+    margin-bottom: 1rem;
+  }
+}
+
+@for $x from 1 through 4 {
+  .how-to-buy__step:nth-child(#{$x}) {
+    .how-to-buy__step-number {
+      color: hsl(-10+30 * $x, 100%, 59%);
+    }
+  }
+}
+
+.how-to-buy__step-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: $color-text-light;
+
+  @media (max-width: $sm-width) {
+    margin-bottom: 1rem;
+  }
+}
+
+.how-to-buy__step-description {
+  text-align: center;
+  line-height: 1.25;
+}
