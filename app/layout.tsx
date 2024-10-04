@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Noto_Sans_Display } from 'next/font/google';
 // import { Manrope } from 'next/font/google';
 // import { Shantell_Sans } from 'next/font/google';
 // import { Roboto_Condensed } from 'next/font/google';
@@ -23,7 +23,7 @@ import './globals.scss';
 
 // const font = Shantell_Sans({ subsets: ['cyrillic'] });
 // const font = Roboto_Condensed({ subsets: ['cyrillic'] });
-const font = Inter({ subsets: ['cyrillic'] });
+const font = Noto_Sans_Display({ subsets: ['cyrillic'] });
 
 export const metadata: Metadata = {
   title: 'Battery',
