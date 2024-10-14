@@ -10,6 +10,7 @@ $color-text-light: #fff;
 $color-primary: #eeff00;
 // $color-blue: #0b68b8;
 $color-blue: #0089ff;
+$color-blue-light: scale-color($color-blue, $lightness: 30%);
 // $color-blue: #3a9dd0;
 $color-red: #cd373a;
 $color-green: #5ae045;

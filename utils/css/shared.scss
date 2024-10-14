@@ -33,8 +33,6 @@
 }
 
 %button {
-  // color: $color-bg-main;
-  // background: $color-primary;
   color: $color-text-light;
   background: $color-red;
   border-radius: $border-radius-main;
@@ -42,17 +40,8 @@
   text-transform: uppercase;
   cursor: pointer;
   transition: $main-transition;
-  font-size: 1.5rem;
-
-  @media (max-width: $md-width) {
-    font-size: 1.5rem;
-  }
-  @media (max-width: $sm-width) {
-    font-size: 1.25rem;
-  }
 
   &:active {
-    // background: $color-primary-dark;
     background: $color-blue;
   }
 

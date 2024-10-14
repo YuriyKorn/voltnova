@@ -8,6 +8,7 @@ import img_adv from '@/assets/catalogSection/p_01.webp';
 import img_pr_01 from '@/assets/catalogSection/prod_01.webp';
 import img_pr_02 from '@/assets/catalogSection/prod_02.webp';
 import img_pr_03 from '@/assets/catalogSection/prod_03.webp';
+import Link from 'next/link';
 
 const advantages: string[] = [
   'Доступна вартість',
@@ -17,48 +18,56 @@ const advantages: string[] = [
   'Індивідуальна ціна на великі замовлення'
 ];
 
-const products: { title: string; img: StaticImageData; options: string[]; isAvailable: boolean }[] =
-  [
-    {
-      title: `Акумуляторна система
+const products: {
+  title: string;
+  img: StaticImageData;
+  options: string[];
+  isAvailable: boolean;
+  url: string;
+}[] = [
+  {
+    title: `Акумуляторна система
 48-100Ah`,
-      img: img_pr_01,
-      options: [
-        '51.2 (48) вольт 100 Ампер',
-        'Ємність 5.12 кВт',
-        'Строк служби >6000 циклів',
-        'до 16 батарей паралельно',
-        'вага 45 кг'
-      ],
-      isAvailable: true
-    },
-    {
-      title: `Акумуляторна система
+    img: img_pr_01,
+    options: [
+      '51.2 (48) вольт 100 Ампер',
+      'Ємність 5.12 кВт',
+      'Строк служби >6000 циклів',
+      'до 16 батарей паралельно',
+      'вага 45 кг'
+    ],
+    isAvailable: true,
+    url: 'prod_001'
+  },
+  {
+    title: `Акумуляторна система
 48-200Ah`,
-      img: img_pr_02,
-      options: [
-        '51.2 (48) вольт 200 Ампер',
-        'Ємність 10.24 кВт',
-        'Строк служби >6000 циклів',
-        'до 16 батарей паралельно',
-        'вага 91 кг'
-      ],
-      isAvailable: true
-    },
-    {
-      title: `Інвертор гібридний
+    img: img_pr_02,
+    options: [
+      '51.2 (48) вольт 200 Ампер',
+      'Ємність 10.24 кВт',
+      'Строк служби >6000 циклів',
+      'до 16 батарей паралельно',
+      'вага 91 кг'
+    ],
+    isAvailable: true,
+    url: 'prod_002'
+  },
+  {
+    title: `Інвертор гібридний
 48-5500W`,
-      img: img_pr_03,
-      options: [
-        'гібридний МРРТ інвертор',
-        '48V DC / 230V AC',
-        'потужність 5500 Watt',
-        'чиста синусоїда',
-        'вага 11 кг'
-      ],
-      isAvailable: true
-    }
-  ];
+    img: img_pr_03,
+    options: [
+      'гібридний МРРТ інвертор',
+      '48V DC / 230V AC',
+      'потужність 5500 Watt',
+      'чиста синусоїда',
+      'вага 11 кг'
+    ],
+    isAvailable: true,
+    url: 'prod_003'
+  }
+];
 
 const Catalog = () => {
   return (
@@ -112,6 +121,9 @@ const Catalog = () => {
                   </li>
                 ))}
               </ul>
+              <Link href={product.url} className={styles['catalog__product-link']}>
+                <button>Детальніше</button>
+              </Link>
             </li>
           ))}
         </ul>

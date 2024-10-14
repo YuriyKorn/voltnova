@@ -39,7 +39,7 @@ const Service = () => {
     <section className={styles.service} id="services">
       <div className={styles.service__inner}>
         <h2 className={styles.service__heading}>- Сервіс -</h2>
-        <ul className={styles.services}>
+        <ul>
           {services.map((service) => (
             <li key={service.title} className={styles.service__item}>
               <div>

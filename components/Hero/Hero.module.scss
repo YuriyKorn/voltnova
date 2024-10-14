@@ -63,5 +63,12 @@
 .hero__btn {
   @extend %button;
 
-  background: #cd373a;
+  font-size: 1.5rem;
+
+  // @media (max-width: $md-width) {
+  //   font-size: 1.5rem;
+  // }
+  @media (max-width: $sm-width) {
+    font-size: 1.25rem;
+  }
 }

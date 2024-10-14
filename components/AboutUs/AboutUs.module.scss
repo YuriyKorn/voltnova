@@ -1,0 +1,61 @@
+@import '../../utils/css/shared.scss';
+
+.about-us {
+  h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+    color: $color-blue;
+  }
+}
+
+.about-us__inner {
+  @extend %inner-container;
+}
+
+.about-us__img-container {
+  margin-bottom: 2rem;
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: $border-radius-lg;
+  }
+}
+
+.about-us__description {
+  font-size: 1.25rem;
+  line-height: 1.25;
+  text-indent: 2rem;
+
+  @media (max-width: $sm-width) {
+    font-size: 1rem;
+    line-height: 1;
+  }
+}
+
+.about-us__link-container {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.about-us__link {
+  font-size: 1.25rem;
+  color: $color-blue;
+  transition: $main-transition;
+
+  @media (max-width: $sm-width) {
+    font-size: 1rem;
+  }
+
+  &:active {
+    color: $color-blue-light;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      color: $color-blue-light;
+    }
+  }
+}

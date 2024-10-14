@@ -159,3 +159,27 @@
   margin-right: 0.25rem;
   color: $color-blue;
 }
+
+.catalog__product-link {
+  margin-top: 1rem;
+
+  button {
+    @extend %button;
+
+    background: $color-blue;
+    color: $color-text-light;
+    font-size: 0.85rem;
+
+    &:active {
+      background: $color-text-light;
+      color: $color-bg-dark;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        background: $color-text-light;
+        color: $color-bg-dark;
+      }
+    }
+  }
+}

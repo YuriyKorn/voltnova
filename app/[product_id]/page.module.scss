@@ -1,0 +1,5 @@
+@import '../../utils/css/shared.scss';
+
+.product {
+  @extend %padding-header;
+}
