@@ -1,0 +1,8 @@
+@import '../../utils/css/shared.scss';
+
+.invalid-feedback {
+  margin-top: 5px;
+  font-size: 0.75rem;
+  color: $color-invalid;
+  text-transform: uppercase;
+}

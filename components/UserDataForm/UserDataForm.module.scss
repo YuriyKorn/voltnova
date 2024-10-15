@@ -1,0 +1,9 @@
+@import '../../utils/css/shared.scss';
+
+.form {
+  text-align: center;
+}
+
+.form__submit-btn {
+  @extend %button;
+}

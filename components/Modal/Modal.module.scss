@@ -1,0 +1,37 @@
+@import '../../utils/css/shared.scss';
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: rgba(#000, 0.9);
+  color: $color-light;
+  z-index: $modal-z-i;
+}
+
+.modal__content-container {
+  position: relative;
+  padding: 2rem;
+  max-width: 100%;
+}
+
+.modal__close-btn {
+  position: absolute;
+  top: 0.25rem;
+  right: 0.25rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.modal__ok-btn {
+  @extend %button;
+  min-width: 80px;
+  margin: 0;
+  font-size: 1.5rem;
+}

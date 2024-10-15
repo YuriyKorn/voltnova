@@ -113,6 +113,7 @@
   font-weight: bold;
   text-align: center;
   color: $color-text-light;
+  white-space: pre;
 
   @media (max-width: $sm-width) {
     font-size: 1.5rem;

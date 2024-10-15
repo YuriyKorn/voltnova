@@ -44,7 +44,7 @@ const Catalog = () => {
           {products.map((product) => (
             <li key={product.simpleDescription.title} className={styles.catalog__product}>
               <h4 className={styles['catalog__product-title']}>
-                <pre>{product.simpleDescription.title}</pre>
+                {product.simpleDescription.title}
               </h4>
               <div className={styles['catalog__product-img-container']}>
                 <Image src={product.img} alt={product.simpleDescription.title} priority />

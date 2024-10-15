@@ -27,7 +27,7 @@ const products: {
     img: img_pr_01,
     simpleDescription: {
       title: `Акумуляторна система
-      48-100Ah`,
+48-100Ah`,
       options: [
         '51.2 (48) вольт 100 Ампер',
         'Ємність 5.12 кВт',
@@ -38,7 +38,8 @@ const products: {
       isAvailable: true
     },
     fullDescription: {
-      title: 'Акумуляторна система 48-100Ah',
+      title: `Акумуляторна система
+48-100Ah`,
       descriptionPrimary: {
         title: 'Voltnova BND-WMLV51V100AH-S',
         content:
@@ -149,7 +150,7 @@ const products: {
     img: img_pr_02,
     simpleDescription: {
       title: `Акумуляторна система
-      48-200Ah`,
+48-200Ah`,
       options: [
         '51.2 (48) вольт 200 Ампер',
         'Ємність 10.24 кВт',
@@ -160,7 +161,8 @@ const products: {
       isAvailable: true
     },
     fullDescription: {
-      title: 'Акумуляторна система 48-200Ah',
+      title: `Акумуляторна система
+48-200Ah`,
       descriptionPrimary: {
         title: 'Voltnova BND-WMLV51V100AH-S',
         content:
@@ -272,7 +274,7 @@ const products: {
     img: img_pr_03,
     simpleDescription: {
       title: `Інвертор гібридний
-      48-5500W`,
+48-5500W`,
       options: [
         'гібридний МРРТ інвертор',
         '48V DC / 230V AC',
@@ -283,7 +285,8 @@ const products: {
       isAvailable: true
     },
     fullDescription: {
-      title: 'Гібридний інвертор BND-WM5548(A)HFSPB 48V, 5500W',
+      title: `Гібридний інвертор
+BND-WM5548(A)HFSPB 48V, 5500W`,
       descriptionPrimary: {
         content:
           'Це сучасне та ефективне рішення для забезпечення безперебійного живлення від сонячної енергії та/або батарей, що підходить для домашнього використання або малого бізнесу. Цей пристрій поєднує в собі функції інвертора, зарядного пристрою та MPPT-контролера для максимізації ефективності роботи сонячних панелей.'

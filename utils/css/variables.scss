@@ -21,9 +21,9 @@ $color-light: #f6f6f6;
 // $color-light: #f1f1f1;
 // $color-dark: #121212;
 // $color-grey: #9b9b9b;
-// $color-invalid: #fb742d;
+$color-invalid: #fb742d;
 // $color-invalid: #f47174;
-// $color-invalid-bg: #ea959f;
+$color-invalid-bg: #ea959f;
 // $color-invalid-bg: #dc3545;
 
 // metrics
@@ -48,8 +48,8 @@ $nav-items-amount: 5;
 
 // z-i
 $header-z-i: 9;
+$modal-z-i: 11;
 // $spinner-z-i: 11;
-// $modal-z-i: 11;
 // $not-found-z-i: 11;
 
 // transitions
