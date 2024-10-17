@@ -33,10 +33,7 @@ export async function POST(request: Request): Promise<NextResponse<ResponseBody>
     );
 
     if (response.status !== 200) {
-      return NextResponse.json(
-        { message: 'cant send tg message. tg_bot:' + process.env.TELEGRAM_BOT_NAME },
-        { status: 503 }
-      );
+      return NextResponse.json({ message: 'cant send tg message' }, { status: 503 });
     }
   } catch (error) {
     console.log('error: ', error);

@@ -20,17 +20,23 @@
 
   svg {
     cursor: pointer;
+    transition: $main-transition;
 
     &:active {
-      fill: $color-secondary;
+      fill: $color-primary;
     }
 
     @media (hover: hover) and (pointer: fine) {
       &:hover {
-        fill: $color-secondary;
+        fill: $color-primary;
       }
     }
   }
+}
+
+.form__title {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
 }
 
 .form__submit-btn {

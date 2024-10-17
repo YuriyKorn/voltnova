@@ -80,7 +80,7 @@
 
   span {
     &:first-child {
-      color: $color-primary;
+      color: $color-secondary;
       font-weight: bold;
     }
 
@@ -157,6 +157,6 @@
 }
 
 .t-head {
-  color: $color-primary !important;
+  color: $color-secondary !important;
   font-weight: bold !important;
 }

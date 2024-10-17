@@ -38,7 +38,7 @@ const UserDataForm = ({ closeModal, productId }: IUserDataFormProps) => {
     async (event: React.FormEvent<HTMLFormElement>) => {
       event.preventDefault();
 
-      if (!nameInput.current || !phoneInput.current || !productId) {
+      if (!nameInput.current || !phoneInput.current) {
         return new Error('no inputs');
       }
 
@@ -111,9 +111,9 @@ const UserDataForm = ({ closeModal, productId }: IUserDataFormProps) => {
       )}
       {isSuccess && (
         <div className={styles['modal-message-container']}>
+          {productId && <p>Дякуємо за ваше замовлення!</p>}
           <p>
-            {`Дякуємо за ваше замовлення!
-Ми зв'яжемося з Вами у найближчий робочий час (Пн-Пт: 09:30-20:30, Сб-Нд: 10:00-19:00)`}
+            Ми зв'яжемося з Вами у найближчий робочий час (Пн-Пт: 09:30-20:30, Сб-Нд: 10:00-19:00)
           </p>
           <button onClick={closeModal}>ok</button>
         </div>
@@ -123,6 +123,7 @@ const UserDataForm = ({ closeModal, productId }: IUserDataFormProps) => {
           <div className={styles['form__close-btn']}>
             <IoClose onClick={closeModal} />
           </div>
+          <p className={styles.form__title}>Залиште дані для зворотного зв'язку</p>
           <InputGroup
             title="Ім'я"
             type={InputGroupTypes.text}
@@ -142,7 +143,7 @@ const UserDataForm = ({ closeModal, productId }: IUserDataFormProps) => {
             onFocus={focusInput}
           />
           <button type="submit" className={styles['form__submit-btn']}>
-            Підтвердити замовлення
+            {productId ? 'Підтвердити замовлення' : "Зв'яжіться зі мною"}
           </button>
         </form>
       )}

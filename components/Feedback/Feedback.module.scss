@@ -1,0 +1,35 @@
+@import '../../utils/css/shared.scss';
+
+.feedback {
+  position: fixed;
+
+  right: 2rem;
+  bottom: 2rem;
+  padding: 0.5rem;
+  color: $color-primary;
+  background-color: $color-light;
+  font-size: 2rem;
+  border-radius: 50%;
+  border: 5px solid $color-primary;
+  z-index: 2;
+  transition: $main-transition;
+  cursor: pointer;
+
+  @media (max-width: $sm-width) {
+    right: 1rem;
+    bottom: 1rem;
+    border-width: 5px;
+  }
+
+  &:active {
+    color: $color-primary-light;
+    border-color: $color-primary-light;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      color: $color-primary-light;
+      border-color: $color-primary-light;
+    }
+  }
+}

@@ -6,6 +6,7 @@ import { Noto_Sans_Display } from 'next/font/google';
 // import localFont from 'next/font/local';
 
 import Header from '@/components/Header/Header';
+import Feedback from '@/components/Feedback/Feedback';
 import Footer from '@/components/Footer/Footer';
 
 import './globals.scss';
@@ -41,6 +42,7 @@ export default function RootLayout({
       <body className={font.className}>
         <Header />
         {children}
+        <Feedback />
         <Footer />
       </body>
     </html>

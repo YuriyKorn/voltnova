@@ -1,6 +1,6 @@
 export enum InputGroupTypes {
   text = 'text',
-  tel = 'number'
+  tel = 'tel'
 }
 
 export enum InputFieldNames {

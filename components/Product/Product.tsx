@@ -73,7 +73,7 @@ const Product = ({ id }: IProduct) => {
               <h4>{product.fullDescription.listSecondary.heading}</h4>
               <ul className={styles['product__list-secondary']}>
                 {product.fullDescription.listSecondary.list.map((item) => (
-                  <li key={item.title}>
+                  <li key={item.description}>
                     <span className={styles['dot-icon']}>
                       <GoDotFill />
                     </span>
