@@ -22,12 +22,10 @@
 
 .hero__heading {
   margin-bottom: 4rem;
-  color: $color-primary;
+  color: $color-secondary;
   text-align: center;
   font-size: 4rem;
   font-weight: bold;
-
-  // -webkit-text-stroke: 1px red;
 
   &::before {
     @extend %before-line;
@@ -65,9 +63,21 @@
 
   font-size: 1.5rem;
 
-  // @media (max-width: $md-width) {
-  //   font-size: 1.5rem;
-  // }
+  color: $color-text-main;
+  background: $color-red;
+
+  &:active {
+    background: $color-primary;
+    color: $color-text-main;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background: $color-primary;
+      color: $color-text-main;
+    }
+  }
+
   @media (max-width: $sm-width) {
     font-size: 1.25rem;
   }

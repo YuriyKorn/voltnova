@@ -24,11 +24,11 @@
   max-width: 100%;
   padding: 0.75rem 1rem;
   background: $color-light;
-  color: $color-blue;
+  color: $color-primary;
   font-size: 2rem;
 
   &::placeholder {
-    color: rgba($color-blue, 0.3);
+    color: rgba($color-bg-main, 0.33);
   }
 
   @media (max-width: $md-width) {
@@ -41,5 +41,5 @@
 }
 
 .input-group__input_invalid {
-  background: $color-invalid-bg;
+  background: rgba($color-invalid-bg, 0.5);
 }

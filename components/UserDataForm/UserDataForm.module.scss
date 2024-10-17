@@ -2,8 +2,68 @@
 
 .form {
   text-align: center;
+  padding: 1rem 2rem;
+  background-color: $color-bg-light;
+  border-radius: $border-radius-lg;
+
+  @media (max-width: $sm-width) {
+    padding: 1rem;
+  }
+}
+
+.form__close-btn {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  transition: $main-transition;
+
+  svg {
+    cursor: pointer;
+
+    &:active {
+      fill: $color-secondary;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        fill: $color-secondary;
+      }
+    }
+  }
 }
 
 .form__submit-btn {
   @extend %button;
+}
+
+.spinner {
+  width: 100px;
+  height: 100px;
+
+  svg {
+    fill: $color-primary;
+  }
+}
+
+.modal-message-container {
+  padding: 1rem;
+  border-radius: $border-radius-lg;
+  background: $color-bg-light;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+
+  p {
+    font-size: 1.25rem;
+    color: $color-text-main;
+    margin-bottom: 2rem;
+    white-space: pre-wrap;
+  }
+
+  button {
+    @extend %button;
+
+    font-size: 1.5rem;
+  }
 }

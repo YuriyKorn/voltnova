@@ -6,7 +6,7 @@
     font-size: 2rem;
     text-align: center;
     font-weight: bold;
-    color: $color-blue;
+    color: $color-primary;
   }
 }
 
@@ -42,7 +42,7 @@
 
 .about-us__link {
   font-size: 1.25rem;
-  color: $color-blue;
+  color: $color-primary;
   transition: $main-transition;
 
   @media (max-width: $sm-width) {
@@ -50,12 +50,12 @@
   }
 
   &:active {
-    color: $color-blue-light;
+    color: $color-primary-light;
   }
 
   @media (hover: hover) and (pointer: fine) {
     &:hover {
-      color: $color-blue-light;
+      color: $color-primary-light;
     }
   }
 }

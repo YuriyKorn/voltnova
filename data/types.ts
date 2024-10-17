@@ -1,6 +1,6 @@
 export enum InputGroupTypes {
   text = 'text',
-  tel = 'tel'
+  tel = 'number'
 }
 
 export enum InputFieldNames {
@@ -11,4 +11,15 @@ export enum InputFieldNames {
 export interface IInputErrors {
   name?: string[];
   phone?: string[];
+}
+
+export interface IInputData {
+  name: string;
+  phone: string;
+}
+
+export interface IUserData {
+  name: string;
+  phone: string;
+  productId?: string;
 }

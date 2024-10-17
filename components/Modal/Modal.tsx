@@ -6,12 +6,13 @@ import { IoClose } from 'react-icons/io5';
 import styles from './Modal.module.scss';
 
 interface IModalProps {
+  isCloseBtn?: boolean;
   isWithOkBtn?: boolean;
-  closeModal: () => void;
+  closeModal?: () => void;
   children: React.ReactNode;
 }
 
-const Modal = ({ isWithOkBtn, closeModal, children }: IModalProps) => {
+const Modal = ({ isCloseBtn, isWithOkBtn, closeModal, children }: IModalProps) => {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -27,9 +28,11 @@ const Modal = ({ isWithOkBtn, closeModal, children }: IModalProps) => {
     ? createPortal(
         <div className={styles.modal}>
           <div className={styles['modal__content-container']}>
-            <div className={styles['modal__close-btn']} onClick={closeModal}>
-              <IoClose />
-            </div>
+            {isCloseBtn && (
+              <div className={styles['modal__close-btn']} onClick={closeModal}>
+                <IoClose />
+              </div>
+            )}
             {children}
           </div>
           {isWithOkBtn && (

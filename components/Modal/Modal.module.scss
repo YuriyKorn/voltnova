@@ -19,6 +19,10 @@
   position: relative;
   padding: 2rem;
   max-width: 100%;
+
+  @media (max-width: $sm-width) {
+    padding: 1rem;
+  }
 }
 
 .modal__close-btn {

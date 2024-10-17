@@ -20,7 +20,7 @@
   font-size: 2rem;
   text-align: center;
   font-weight: bold;
-  color: $color-blue;
+  color: $color-primary;
 }
 
 .how-to-buy__steps {
@@ -68,7 +68,7 @@
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 2rem;
-  color: $color-text-light;
+  color: $color-text-main;
 
   @media (max-width: $sm-width) {
     margin-bottom: 1rem;

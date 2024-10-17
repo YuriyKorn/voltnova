@@ -28,13 +28,13 @@
   display: block;
   height: 5px;
   width: 150px;
-  background: $color-primary;
+  background: $color-secondary;
   border-radius: 2px;
 }
 
 %button {
-  color: $color-text-light;
-  background: $color-red;
+  background: $color-primary;
+  color: $color-text-main;
   border-radius: $border-radius-main;
   padding: 0.75rem 1rem;
   text-transform: uppercase;
@@ -42,12 +42,14 @@
   transition: $main-transition;
 
   &:active {
-    background: $color-blue;
+    background: $color-text-main;
+    color: $color-bg-dark;
   }
 
   @media (hover: hover) and (pointer: fine) {
     &:hover {
-      background: $color-blue;
+      background: $color-text-main;
+      color: $color-bg-dark;
     }
   }
 }

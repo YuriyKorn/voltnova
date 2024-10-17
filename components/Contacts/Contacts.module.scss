@@ -25,7 +25,7 @@
   font-size: 2rem;
   text-align: center;
   font-weight: bold;
-  color: $color-blue;
+  color: $color-primary;
 }
 
 .contacts__container {
@@ -61,17 +61,17 @@
 .contacts__link-icon {
   margin-right: 1rem;
   font-size: 2rem;
-  color: $color-blue;
+  color: $color-primary;
 }
 
 .contacts__link-text {
-  color: $color-text-light;
+  color: $color-text-main;
   font-size: 1.25rem;
   max-width: 350px;
   transition: $main-transition;
 
   @mixin hover {
-    color: $color-primary;
+    color: $color-secondary;
   }
   &:active {
     @include hover;

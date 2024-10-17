@@ -73,11 +73,11 @@
 
     @media (hover: hover) and (pointer: fine) {
       &:hover {
-        color: $color-text-light;
+        color: $color-grey;
       }
     }
     &:active {
-      color: $color-text-light;
+      color: $color-grey;
     }
   }
 }
