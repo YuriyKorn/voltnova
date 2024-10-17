@@ -39,7 +39,7 @@ const products: {
     },
     fullDescription: {
       title: `Акумуляторна система
-48-100Ah`,
+Voltnova BND-WMLV51V100AH-S`,
       descriptionPrimary: {
         title: 'Voltnova BND-WMLV51V100AH-S',
         content:
@@ -162,7 +162,7 @@ const products: {
     },
     fullDescription: {
       title: `Акумуляторна система
-48-200Ah`,
+Voltnova BND-WMLV51V200AH-S`,
       descriptionPrimary: {
         title: 'Voltnova BND-WMLV51V100AH-S',
         content:

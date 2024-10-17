@@ -36,7 +36,7 @@ const Product = ({ id }: IProduct) => {
     <>
       {isModalOpen && (
         <Modal>
-          <UserDataForm closeModal={closeModal} productId={product.id} />
+          <UserDataForm closeModal={closeModal} productId={product.fullDescription.title} />
         </Modal>
       )}
       <section>

@@ -22,9 +22,9 @@ export async function POST(request: Request): Promise<NextResponse<ResponseBody>
       `https://api.telegram.org/${process.env.TELEGRAM_BOT_NAME}:${
         process.env.TELEGRAM_BOT_PASSWORD
       }/sendMessage?chat_id=${process.env.TELEGRAM_CHAT_ID}&parse_mode=html&text=${encodeURI(
-        `<u><b>Volt-Nova</b></u>\n<i>ім'я клієнта</i>: <b>${
+        `<u><b>Volt-Nova</b></u>\n\n<i>ім'я клієнта</i>: <b>${
           userData.name
-        }</b>\n<i>телефон клієнта</i>: <b>${userData.phone}</b>\n${
+        }</b>\n\n<i>телефон клієнта</i>: <b>${userData.phone}</b>\n\n${
           userData.productId
             ? `<i>товар</i>: <b>${userData.productId}</b>`
             : `зв'яжіться зі мною, будь-ласка`
