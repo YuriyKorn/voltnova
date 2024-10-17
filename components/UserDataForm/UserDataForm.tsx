@@ -104,7 +104,8 @@ const UserDataForm = ({ closeModal, productId }: IUserDataFormProps) => {
       )}
       {isSomethingWentWrong && (
         <div className={styles['modal-message-container']}>
-          <p>щось пішло не так. спробуйте ще раз.</p>
+          <p>{`Щось пішло не так.
+Спробуйте ще раз.`}</p>
           <button onClick={closeModal}>ok</button>
         </div>
       )}
