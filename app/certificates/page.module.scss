@@ -1,0 +1,5 @@
+@import '../../utils/css/shared.scss';
+
+.main {
+  @extend %padding-header;
+}

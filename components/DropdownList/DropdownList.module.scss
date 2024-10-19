@@ -1,0 +1,28 @@
+@import '../../utils/css/shared.scss';
+
+.dropdown-list__toggler {
+  height: 100%;
+}
+
+.dropdown-list__options {
+  position: absolute;
+  height: 0;
+  overflow: hidden;
+  transition: $main-transition;
+}
+
+.dropdown-list__options_open {
+  margin-top: 1rem;
+}
+
+.dropdown-list__options_right {
+  position: absolute;
+  right: 0;
+}
+
+.dropdown-list__options_sublist {
+  @media (max-width: $sm-width) {
+    position: static;
+    margin: 0;
+  }
+}

@@ -1,0 +1,15 @@
+@import '../../utils/css/shared.scss';
+
+.certificates {
+  h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+    color: $color-primary;
+  }
+}
+
+.certificates__inner {
+  @extend %inner-container;
+}

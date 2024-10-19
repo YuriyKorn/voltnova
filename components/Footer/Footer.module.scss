@@ -24,7 +24,10 @@
 .footer__logo {
   display: flex;
   height: 75%;
-  margin-left: 2rem;
+
+  @media (max-width: $sm-width) {
+    margin-right: 2rem;
+  }
 
   img {
     width: auto;
