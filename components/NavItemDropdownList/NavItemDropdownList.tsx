@@ -7,6 +7,7 @@ import DropdownList from '../DropdownList/DropdownList';
 import classes from './NavItemDropdownList.module.scss';
 
 interface NavItemDropdownListProps {
+  closeMenu: () => void;
   title: string;
   list: {
     title: string;
@@ -14,7 +15,7 @@ interface NavItemDropdownListProps {
   }[];
 }
 
-const NavItemDropdownList = ({ title, list }: NavItemDropdownListProps) => {
+const NavItemDropdownList = ({ closeMenu, title, list }: NavItemDropdownListProps) => {
   const [isOpenList, setIsOpenList] = useState(false);
 
   return (
@@ -51,7 +52,9 @@ const NavItemDropdownList = ({ title, list }: NavItemDropdownListProps) => {
                       className={classes['nav-item-dropdown-list__options-item']}
                       key={item.title}
                     >
-                      <Link href={item.url}>{item.title}</Link>
+                      <Link href={item.url} onClick={closeMenu}>
+                        {item.title}
+                      </Link>
                     </li>
                   ))
                 : null}

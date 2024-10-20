@@ -24,10 +24,14 @@ const Navigation = ({ isMobileMenuOpen, closeMobileMenu }: INavigation) => {
             }
           >
             {item.role === navItemRole.list ? (
-              <NavItemDropdownList title={item.title} list={item.sublist} />
+              <NavItemDropdownList
+                title={item.title}
+                list={item.sublist}
+                closeMenu={closeMobileMenu}
+              />
             ) : (
               <Link href={item.url} onClick={closeMobileMenu}>
-                {item.title}{' '}
+                {item.title}
               </Link>
             )}
           </li>

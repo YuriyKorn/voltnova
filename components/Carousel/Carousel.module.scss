@@ -10,6 +10,13 @@
   --slide-size-sm: 100%;
   --slide-size-lg: 50%;
   --slide-size: calc(100% / 3);
+
+  h2 {
+    margin-bottom: 2rem;
+    text-align: center;
+    color: $color-primary;
+    font-size: 1.25rem;
+  }
 }
 
 .carousel__viewport {
@@ -32,6 +39,7 @@
 }
 
 .carousel__slide {
+  position: relative;
   min-width: 0;
   flex: 0 0 var(--slide-size);
   padding-left: var(--slide-spacing);
@@ -50,19 +58,41 @@
     width: 100%;
     object-fit: cover;
 
-    border-radius: 1.8rem;
-    font-size: 4rem;
-    font-weight: 600;
+    border-radius: $border-radius-lg;
+    background-color: #fff;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     user-select: none;
+    // transition: $main-transition;
+  }
+}
+
+.carousel__slide_fullscreen-option {
+  cursor: pointer;
+}
+
+.carousel__slide_expanded {
+  flex: 0 0 100%;
+  display: flex;
+  justify-content: center;
+
+  img {
+    height: 80vh;
+    width: auto;
+
+    @media (max-width: $xs-width) {
+      width: 100%;
+      height: auto;
+    }
   }
 }
 
 .carousel__controls {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 0.5rem;
 
   button {

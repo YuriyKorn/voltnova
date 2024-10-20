@@ -45,7 +45,7 @@ const AboutUs = () => {
           з нашими системами резервного живлення.
         </p>
         <div className={styles['about-us__link-container']}>
-          <Link href="#" className={styles['about-us__link']}>
+          <Link href="/certificates" className={styles['about-us__link']}>
             Сертифікати відповідності, тестування та безпечності продукції
           </Link>
         </div>

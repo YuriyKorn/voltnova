@@ -5,6 +5,7 @@ import Carousel from '../Carousel/Carousel';
 import styles from './About.module.scss';
 
 import img from '@/assets/aboutSection/img001.webp';
+import { carouselAboutSection } from '@/data/carousels';
 
 const About = () => {
   return (
@@ -25,7 +26,7 @@ const About = () => {
             </p>
           </div>
         </article>
-        <Carousel />
+        <Carousel carousel={carouselAboutSection} />
       </div>
     </section>
   );
