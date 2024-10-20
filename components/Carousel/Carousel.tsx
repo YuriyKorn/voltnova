@@ -60,8 +60,8 @@ const Carousel = ({ carousel, isFullScreenOption, title, isWithCounter }: ICarou
 
   return (
     <div className={styles.carousel}>
+      {title && <h2 ref={carouselTitle}>{title}</h2>}
       <div className={styles.carousel__viewport} ref={emblaRef}>
-        {title && <h2 ref={carouselTitle}>{title}</h2>}
         <div className={styles.carousel__container}>
           {carousel.slides.map((slide, index) => (
             <div
