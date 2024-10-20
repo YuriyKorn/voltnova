@@ -28,13 +28,11 @@ const DropdownList = ({
       elem.style.height = '0';
       if (document.documentElement.clientWidth <= 767) {
         elem.style.transition = 'all 0.15s linear';
-        // elem.style.transition = 'all 0s linear';
       }
     } else {
       elem.style.height = elem.scrollHeight + 'px';
       if (document.documentElement.clientWidth <= 767) {
         elem.style.transition = 'unset';
-        // elem.style.transition = 'all 0.15s linear';
         if (togglerElem.current) {
           togglerElem.current.scrollIntoView({ behavior: 'smooth' });
         }

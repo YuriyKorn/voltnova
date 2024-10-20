@@ -27,9 +27,11 @@
   }
 
   @media (max-width: $sm-width) {
-    min-height: calc(
-      ((100vh - #{$header-height-sm}) / #{$nav-items-amount}) - #{$border-bottom-width-mob-nav-item}
-    );
+    // min-height: calc(
+    //   ((100dvh - #{$header-height-sm}) / #{$nav-items-amount}) - #{$border-bottom-width-mob-nav-item}
+    // );
+    // min-height: calc(((100dvh - #{$header-height-sm}) / #{$nav-items-amount}));
+    height: 100%;
     align-items: center;
     justify-content: center;
   }

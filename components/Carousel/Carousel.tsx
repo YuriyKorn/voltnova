@@ -23,7 +23,7 @@ interface ICarousel {
 const Carousel = ({ carousel, isFullScreenOption, title, isWithCounter }: ICarousel) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'start' });
 
-  const carouselContainer = useRef<HTMLDivElement>(null);
+  const carouselTitle = useRef<HTMLHeadingElement>(null);
 
   const [isExpandedSlide, setIsExpandedSlide] = useState(false);
 
@@ -50,8 +50,8 @@ const Carousel = ({ carousel, isFullScreenOption, title, isWithCounter }: ICarou
       if (emblaApi) emblaApi.scrollTo(+slideIndex);
       setIsExpandedSlide((prevState) => !prevState);
       setTimeout(() => {
-        if (carouselContainer.current) {
-          carouselContainer.current.scrollIntoView({ behavior: 'smooth' });
+        if (carouselTitle.current) {
+          carouselTitle.current.scrollIntoView({ behavior: 'smooth' });
         }
       }, 10);
     },
@@ -60,9 +60,9 @@ const Carousel = ({ carousel, isFullScreenOption, title, isWithCounter }: ICarou
 
   return (
     <div className={styles.carousel}>
-      {title && <h2>{title}</h2>}
       <div className={styles.carousel__viewport} ref={emblaRef}>
-        <div className={styles.carousel__container} ref={carouselContainer}>
+        {title && <h2 ref={carouselTitle}>{title}</h2>}
+        <div className={styles.carousel__container}>
           {carousel.slides.map((slide, index) => (
             <div
               key={slide.alt}
