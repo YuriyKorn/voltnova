@@ -62,6 +62,50 @@ import slideFccReport_18 from '@/assets/certificates/FCC-Report/img_018.png';
 import slideFccReport_19 from '@/assets/certificates/FCC-Report/img_019.png';
 import slideFccReport_20 from '@/assets/certificates/FCC-Report/img_020.png';
 
+import slideManual_01 from '@/assets/manual/000.png';
+import slideManual_02 from '@/assets/manual/001.png';
+import slideManual_03 from '@/assets/manual/002.png';
+import slideManual_04 from '@/assets/manual/003.png';
+import slideManual_05 from '@/assets/manual/004.png';
+import slideManual_06 from '@/assets/manual/005.png';
+import slideManual_07 from '@/assets/manual/006.png';
+import slideManual_08 from '@/assets/manual/007.png';
+import slideManual_09 from '@/assets/manual/008.png';
+import slideManual_10 from '@/assets/manual/009.png';
+import slideManual_11 from '@/assets/manual/010.png';
+import slideManual_12 from '@/assets/manual/011.png';
+import slideManual_13 from '@/assets/manual/012.png';
+import slideManual_14 from '@/assets/manual/013.png';
+import slideManual_15 from '@/assets/manual/014.png';
+import slideManual_16 from '@/assets/manual/015.png';
+import slideManual_17 from '@/assets/manual/016.png';
+import slideManual_18 from '@/assets/manual/017.png';
+import slideManual_19 from '@/assets/manual/018.png';
+import slideManual_20 from '@/assets/manual/019.png';
+import slideManual_21 from '@/assets/manual/020.png';
+import slideManual_22 from '@/assets/manual/021.png';
+import slideManual_23 from '@/assets/manual/022.png';
+import slideManual_24 from '@/assets/manual/023.png';
+import slideManual_25 from '@/assets/manual/024.png';
+import slideManual_26 from '@/assets/manual/025.png';
+import slideManual_27 from '@/assets/manual/026.png';
+import slideManual_28 from '@/assets/manual/027.png';
+import slideManual_29 from '@/assets/manual/028.png';
+import slideManual_30 from '@/assets/manual/029.png';
+import slideManual_31 from '@/assets/manual/030.png';
+import slideManual_32 from '@/assets/manual/031.png';
+import slideManual_33 from '@/assets/manual/032.png';
+import slideManual_34 from '@/assets/manual/033.png';
+import slideManual_35 from '@/assets/manual/034.png';
+import slideManual_36 from '@/assets/manual/035.png';
+import slideManual_37 from '@/assets/manual/036.png';
+import slideManual_38 from '@/assets/manual/037.png';
+import slideManual_39 from '@/assets/manual/038.png';
+import slideManual_40 from '@/assets/manual/039.png';
+import slideManual_41 from '@/assets/manual/040.png';
+import slideManual_42 from '@/assets/manual/041.png';
+import slideManual_43 from '@/assets/manual/042.png';
+
 export type TCarousel = {
   title?: string;
   slides: { img: StaticImageData; alt: string }[];
@@ -150,5 +194,54 @@ export const carouselFccReport: TCarousel = {
     { img: slideFccReport_18, alt: 'img-18' },
     { img: slideFccReport_19, alt: 'img-19' },
     { img: slideFccReport_20, alt: 'img-20' }
+  ]
+};
+
+export const carouselManual: TCarousel = {
+  title: 'Інструкція користувача до гібридного сонячного інвертору',
+  slides: [
+    { img: slideManual_01, alt: 'img-01' },
+    { img: slideManual_02, alt: 'img-02' },
+    { img: slideManual_03, alt: 'img-03' },
+    { img: slideManual_04, alt: 'img-04' },
+    { img: slideManual_05, alt: 'img-05' },
+    { img: slideManual_06, alt: 'img-06' },
+    { img: slideManual_07, alt: 'img-07' },
+    { img: slideManual_08, alt: 'img-08' },
+    { img: slideManual_09, alt: 'img-09' },
+    { img: slideManual_10, alt: 'img-10' },
+    { img: slideManual_11, alt: 'img-11' },
+    { img: slideManual_12, alt: 'img-12' },
+    { img: slideManual_13, alt: 'img-13' },
+    { img: slideManual_14, alt: 'img-14' },
+    { img: slideManual_15, alt: 'img-15' },
+    { img: slideManual_16, alt: 'img-16' },
+    { img: slideManual_17, alt: 'img-17' },
+    { img: slideManual_18, alt: 'img-18' },
+    { img: slideManual_19, alt: 'img-19' },
+    { img: slideManual_20, alt: 'img-20' },
+    { img: slideManual_21, alt: 'img-21' },
+    { img: slideManual_22, alt: 'img-22' },
+    { img: slideManual_23, alt: 'img-23' },
+    { img: slideManual_24, alt: 'img-24' },
+    { img: slideManual_25, alt: 'img-25' },
+    { img: slideManual_26, alt: 'img-26' },
+    { img: slideManual_27, alt: 'img-27' },
+    { img: slideManual_28, alt: 'img-28' },
+    { img: slideManual_29, alt: 'img-29' },
+    { img: slideManual_30, alt: 'img-30' },
+    { img: slideManual_31, alt: 'img-31' },
+    { img: slideManual_32, alt: 'img-32' },
+    { img: slideManual_33, alt: 'img-33' },
+    { img: slideManual_34, alt: 'img-34' },
+    { img: slideManual_35, alt: 'img-35' },
+    { img: slideManual_36, alt: 'img-36' },
+    { img: slideManual_37, alt: 'img-37' },
+    { img: slideManual_38, alt: 'img-38' },
+    { img: slideManual_39, alt: 'img-39' },
+    { img: slideManual_40, alt: 'img-40' },
+    { img: slideManual_41, alt: 'img-41' },
+    { img: slideManual_42, alt: 'img-42' },
+    { img: slideManual_43, alt: 'img-43' }
   ]
 };

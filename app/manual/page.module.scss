@@ -1,0 +1,15 @@
+@import '../../utils/css/shared.scss';
+
+.main {
+  @extend %padding-header;
+
+  flex-grow: 1;
+}
+
+.manual {
+  display: flex;
+}
+
+.manual__inner {
+  @extend %inner-container;
+}

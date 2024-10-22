@@ -4,8 +4,12 @@
   position: relative;
   background-color: $color-bg-main;
   color: $color-secondary;
-  height: 80px;
+  height: $footer-height;
   border-top: 1px solid $color-secondary;
+
+  @media (max-width: $sm-width) {
+    height: $footer-height-sm;
+  }
 
   span {
     text-transform: uppercase;
