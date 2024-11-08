@@ -1,0 +1,28 @@
+@import '../../utils/css/shared.scss';
+
+.notification {
+  position: fixed;
+  top: $header-height;
+  left: 0;
+  width: 100vw;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  color: $color-green;
+  background-color: $color-bg-main;
+  text-align: center;
+  z-index: $notification-z-i;
+  border-bottom: 1px solid $color-secondary;
+
+  @media (max-width: $nav-breakpoint) {
+    top: $header-height-sm;
+  }
+}
+
+.notification__close-btn {
+  margin-left: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+}

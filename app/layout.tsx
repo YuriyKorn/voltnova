@@ -6,6 +6,7 @@ import { Noto_Sans_Display } from 'next/font/google';
 // import localFont from 'next/font/local';
 
 import Header from '@/components/Header/Header';
+import Notification from '@/components/Notification/Notification';
 import Feedback from '@/components/Feedback/Feedback';
 import Footer from '@/components/Footer/Footer';
 
@@ -27,7 +28,7 @@ import './globals.scss';
 const font = Noto_Sans_Display({ subsets: ['cyrillic'] });
 
 export const metadata: Metadata = {
-  title: 'Battery',
+  title: 'VoltNova - energy storage systems',
   description: 'Best LiFePO4 batteries'
 };
 
@@ -41,6 +42,7 @@ export default function RootLayout({
       {/* <body className={`${geistSans.variable} ${geistMono.variable}`}>{children}</body> */}
       <body className={font.className}>
         <Header />
+        <Notification />
         {children}
         <Feedback />
         <Footer />

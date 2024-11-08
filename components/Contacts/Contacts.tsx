@@ -15,9 +15,9 @@ import { PiMapPinFill } from 'react-icons/pi';
 import styles from './Contacts.module.scss';
 
 const contacts: { icon: JSX.Element; text: string; href?: string }[] = [
-  { icon: <FaPhoneSquare />, text: '+38(063)1994369', href: 'tel:+380631994369' },
+  { icon: <FaPhoneSquare />, text: '+38 (063) 199 43 69', href: 'tel:+380631994369' },
   // { icon: <MdAlternateEmail />, text: 'voltnova@email.com', href: 'mailto:voltnova@email.com' },
-  { icon: <FaTelegram />, text: 'швидкий чат', href: 'https://t.me/voltnova' },
+  { icon: <FaTelegram />, text: 'Швидкий чат', href: 'https://t.me/voltnova' },
   { icon: <PiMapPinFill />, text: 'Київ, проспект Європейського Союзу, 43-А' }
 ];
 
