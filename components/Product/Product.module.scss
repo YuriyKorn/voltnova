@@ -23,6 +23,7 @@
 .product__content {
   display: flex;
   align-items: center;
+  margin-bottom: 1rem;
 
   @media (max-width: $md-width) {
     flex-direction: column;
@@ -34,7 +35,10 @@
   max-width: 100%;
   margin-right: 3rem;
   flex-shrink: 0;
-  text-align: center;
+  // text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   @media (max-width: $md-width) {
     margin-right: 0;
@@ -45,7 +49,25 @@
     width: 100%;
     height: auto;
     margin-bottom: 1rem;
+
+    @media (max-width: $md-width) {
+      width: auto;
+      height: 400px;
+    }
   }
+}
+
+.product__old-price {
+  text-decoration: line-through;
+  font-size: 1.25rem;
+  color: $color-red;
+  margin-bottom: 0.5rem;
+}
+
+.product__new-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
 
 .product__buy-btn {

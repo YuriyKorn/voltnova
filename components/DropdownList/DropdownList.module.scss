@@ -21,7 +21,7 @@
 }
 
 .dropdown-list__options_sublist {
-  @media (max-width: $sm-width) {
+  @media (max-width: $nav-breakpoint) {
     position: static;
     margin: 0;
   }

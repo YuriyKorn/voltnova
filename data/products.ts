@@ -21,6 +21,8 @@ const products: {
     characteristicsPrimary: { title: string; description: string }[];
     characteristicsSecondary: { title: string; description: string }[];
   };
+  oldPrice: string;
+  newPrice: string;
 }[] = [
   {
     id: 'product_001',
@@ -143,7 +145,9 @@ Voltnova BND-WMLV51V100AH-S`,
         { title: 'Вологість', description: '5% - 95%' },
         { title: 'Висота над рівнем моря', description: '<2000м' }
       ]
-    }
+    },
+    oldPrice: '44 800 грн',
+    newPrice: '38 850 грн'
   },
   {
     id: 'product_002',
@@ -267,7 +271,9 @@ Voltnova BND-WMLV51V200AH-S`,
         { title: 'Вологість', description: '5% - 95%' },
         { title: 'Висота над рівнем моря', description: '<2000м' }
       ]
-    }
+    },
+    oldPrice: '78 600 грн',
+    newPrice: '68 400 грн'
   },
   {
     id: 'product_003',
@@ -397,7 +403,9 @@ BND-WM5548(A)HFSPB 48V, 5500W`,
             'Не більше 1000м. При висоті більше 1000м - зниження потужності, максимум до 4000м (відповідно до стандарту IEC62040)'
         }
       ]
-    }
+    },
+    oldPrice: '24 100 грн',
+    newPrice: '21 900 грн'
   }
 ];
 

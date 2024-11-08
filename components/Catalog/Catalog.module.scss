@@ -95,7 +95,7 @@
 }
 
 .catalog__product {
-  padding: 2rem;
+  padding: 1rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -105,6 +105,7 @@
 
   @media (max-width: $sm-width) {
     padding: 1rem;
+    width: 100%;
   }
 }
 
@@ -131,7 +132,7 @@
 }
 
 .catalog__product-img-container {
-  height: 400px;
+  height: 300px;
   padding: 1.5rem;
 
   img {
@@ -148,6 +149,19 @@
       transform: scale(1.1);
     }
   }
+}
+
+.catalog__old-price {
+  text-decoration: line-through;
+  font-size: 1.25rem;
+  color: $color-red;
+  margin-bottom: 0.5rem;
+}
+
+.catalog__new-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
 
 .catalog__product-is-available {

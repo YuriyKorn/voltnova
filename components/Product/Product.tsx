@@ -45,6 +45,8 @@ const Product = ({ id }: IProduct) => {
           <div className={styles.product__content}>
             <div className={styles['product__img-container']}>
               <Image src={product.img} alt={product.fullDescription.title} priority />
+              <p className={styles['product__old-price']}>{product.oldPrice}</p>
+              <p className={styles['product__new-price']}>{product.newPrice}</p>
               <button className={styles['product__buy-btn']} onClick={openModal}>
                 Купити
               </button>

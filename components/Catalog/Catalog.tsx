@@ -73,6 +73,8 @@ const Catalog = () => {
                   <Image src={product.img} alt={product.simpleDescription.title} priority />
                 </Link>
               </div>
+              <p className={styles['catalog__old-price']}>{product.oldPrice}</p>
+              <p className={styles['catalog__new-price']}>{product.newPrice}</p>
               <p
                 className={
                   styles['catalog__product-is-available'] +

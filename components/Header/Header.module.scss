@@ -8,7 +8,7 @@
   background-color: rgba($color-bg-main, 1);
   border-bottom: 1px solid $color-secondary;
 
-  @media (max-width: $sm-width) {
+  @media (max-width: $nav-breakpoint) {
     height: $header-height-sm;
   }
 }
@@ -27,7 +27,7 @@
   transition: $main-transition;
   cursor: pointer;
 
-  @media (max-width: $md-width) {
+  @media (max-width: $lg-width) {
     height: 50%;
   }
   @media (max-width: $sm-width) {

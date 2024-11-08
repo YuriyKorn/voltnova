@@ -10,7 +10,7 @@
   cursor: pointer;
   transition: $menu-btn-transition;
 
-  @media (max-width: $sm-width) {
+  @media (max-width: $nav-breakpoint) {
     display: block;
   }
 

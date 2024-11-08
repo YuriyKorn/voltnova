@@ -8,17 +8,17 @@ import {
   //  ColorScheme
 } from '@vis.gl/react-google-maps';
 import { FaPhoneSquare } from 'react-icons/fa';
-import { MdAlternateEmail } from 'react-icons/md';
+// import { MdAlternateEmail } from 'react-icons/md';
 import { FaTelegram } from 'react-icons/fa';
 import { PiMapPinFill } from 'react-icons/pi';
 
 import styles from './Contacts.module.scss';
 
 const contacts: { icon: JSX.Element; text: string; href?: string }[] = [
-  { icon: <FaPhoneSquare />, text: '+38 (093) 111 22 33', href: 'tel:+380731580131' },
-  { icon: <MdAlternateEmail />, text: 'voltnova@email.com', href: 'mailto:voltnova@email.com' },
-  { icon: <FaTelegram />, text: 'швидкий чат', href: 'https://t.me/zanderrman' },
-  { icon: <PiMapPinFill />, text: 'Київ, проспект Європейського Союзу, 43-в' }
+  { icon: <FaPhoneSquare />, text: '+38(063)1994369', href: 'tel:+380631994369' },
+  // { icon: <MdAlternateEmail />, text: 'voltnova@email.com', href: 'mailto:voltnova@email.com' },
+  { icon: <FaTelegram />, text: 'швидкий чат', href: 'https://t.me/voltnova' },
+  { icon: <PiMapPinFill />, text: 'Київ, проспект Європейського Союзу, 43-А' }
 ];
 
 const position = { lat: 50.5034253, lng: 30.4253687 };
