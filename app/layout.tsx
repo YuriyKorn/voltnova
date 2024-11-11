@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import type { Metadata } from 'next';
 import { Noto_Sans_Display } from 'next/font/google';
 // import { Manrope } from 'next/font/google';
@@ -44,6 +45,7 @@ export default function RootLayout({
         <Header />
         <Notification />
         {children}
+        <Analytics />
         <Feedback />
         <Footer />
       </body>
