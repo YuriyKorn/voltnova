@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 import styles from './AboutUs.module.scss';
 
-import img from '@/assets/aboutUs/about-us.png';
+import img from '@/assets/aboutUs/about-us.webp';
 
 const AboutUs = () => {
   return (
