@@ -272,8 +272,8 @@ Voltnova BND-WMLV51V200AH-S`,
         { title: 'Висота над рівнем моря', description: '<2000м' }
       ]
     },
-    oldPrice: '78 600 грн',
-    newPrice: '68 400 грн'
+    oldPrice: '77 400 грн',
+    newPrice: '71 800 грн'
   },
   {
     id: 'product_003',
