@@ -147,7 +147,7 @@ Voltnova BND-WMLV51V100AH-S`,
       ]
     },
     oldPrice: '44 800 грн',
-    newPrice: '38 850 грн'
+    newPrice: '34 900 грн'
   },
   {
     id: 'product_002',
@@ -273,7 +273,7 @@ Voltnova BND-WMLV51V200AH-S`,
       ]
     },
     oldPrice: '77 400 грн',
-    newPrice: '71 800 грн'
+    newPrice: '68 400 грн'
   },
   {
     id: 'product_003',
@@ -405,7 +405,7 @@ BND-WM5548(A)HFSPB 48V, 5500W`,
       ]
     },
     oldPrice: '24 100 грн',
-    newPrice: '21 900 грн'
+    newPrice: '18 900 грн'
   }
 ];
 

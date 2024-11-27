@@ -18,7 +18,7 @@ const Notification = () => {
 
   return (
     <div className={styles.notification}>
-      <span>Акція до кінця листопада! Знижка на всі товари в наявності!</span>
+      <span>Чорна п’ятниця! Знижки на все та для всіх! Кількість товару обмежена.</span>
       <span className={styles['notification__close-btn']} onClick={closeNotification}>
         <IoCloseCircle />
       </span>
