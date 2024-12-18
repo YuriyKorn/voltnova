@@ -1,5 +1,7 @@
 import { StaticImageData } from 'next/image';
 
+import { IsAvailable } from './types';
+
 import img_pr_01 from '@/assets/catalogSection/prod_01.webp';
 import img_pr_02 from '@/assets/catalogSection/prod_02.webp';
 import img_pr_03 from '@/assets/catalogSection/prod_03.webp';
@@ -10,7 +12,7 @@ const products: {
   simpleDescription: {
     title: string;
     options: string[];
-    isAvailable: boolean;
+    isAvailable: 'Закінчується' | 'В наявності' | 'Немає в наявності' | 'В дорозі';
   };
   fullDescription: {
     title: string;
@@ -37,7 +39,7 @@ const products: {
         'до 16 батарей паралельно',
         'вага 45 кг'
       ],
-      isAvailable: true
+      isAvailable: IsAvailable['В наявності']
     },
     fullDescription: {
       title: `Акумуляторна система
@@ -162,13 +164,13 @@ Voltnova BND-WMLV51V100AH-S`,
         'до 16 батарей паралельно',
         'вага 91 кг'
       ],
-      isAvailable: true
+      isAvailable: IsAvailable['В наявності']
     },
     fullDescription: {
       title: `Акумуляторна система
 Voltnova BND-WMLV51V200AH-S`,
       descriptionPrimary: {
-        title: 'Voltnova BND-WMLV51V100AH-S',
+        title: 'Voltnova BND-WMLV51V200AH-S',
         content:
           ' - це сучасна та високоефективна акумуляторна система, розроблена для забезпечення стабільного енергопостачання в домашніх, промислових і комерційних умовах. Цей пристрій дозволяє накопичувати енергію, отриману від сонячних панелей або з мережі, для подальшого використання як аварійне джерело живлення під час відключень. Акумулятор підтримує цілодобову роботу, сприяючи енергонезалежності та надійності енергосистем.'
       },
@@ -288,7 +290,7 @@ Voltnova BND-WMLV51V200AH-S`,
         'чиста синусоїда',
         'вага 11 кг'
       ],
-      isAvailable: true
+      isAvailable: IsAvailable['В наявності']
     },
     fullDescription: {
       title: `Гібридний інвертор

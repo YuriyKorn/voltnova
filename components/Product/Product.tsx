@@ -1,15 +1,16 @@
 'use client';
 
 import Image from 'next/image';
-import { useCallback, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import { GoDotFill } from 'react-icons/go';
 
 import Modal from '../Modal/Modal';
 import UserDataForm from '../UserDataForm/UserDataForm';
 
-import styles from './Product.module.scss';
-
 import products from '@/data/products';
+import { IsAvailable } from '@/data/types';
+
+import styles from './Product.module.scss';
 
 interface IProduct {
   id: string;
@@ -18,7 +19,47 @@ interface IProduct {
 const Product = ({ id }: IProduct) => {
   const product = useMemo(() => products.find((product) => product.id === id), [id]);
 
+  const [updatedProduct, setUpdatedProduct] = useState(product);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isFetchingError, setIsFetchingError] = useState(false);
+
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const fetchProductData = useCallback(async () => {
+    try {
+      const response = await fetch(
+        'https://exchange-currencies-obolon.firebaseio.com/battery.json',
+        { cache: 'no-cache' }
+      );
+      if (response.status !== 200) {
+        return setIsFetchingError(true);
+      }
+
+      const data = await response.json();
+      console.log(data);
+      const fetchedProducts = Object.values(data.products) as {
+        oldPrice: string;
+        newPrice: string;
+        id: string;
+        availability: IsAvailable;
+      }[];
+
+      const fetchedProduct = fetchedProducts.find((prod) => prod.id === product?.id);
+      if (fetchedProduct && product) {
+        const newProduct = {
+          ...product,
+          oldPrice: fetchedProduct.oldPrice,
+          newPrice: fetchedProduct.newPrice
+        };
+        setUpdatedProduct(newProduct);
+      }
+
+      setIsLoading(false);
+    } catch (error) {
+      console.log(error);
+      setIsFetchingError(true);
+    }
+  }, [product]);
 
   const openModal = useCallback(() => {
     setIsModalOpen(true);
@@ -28,7 +69,15 @@ const Product = ({ id }: IProduct) => {
     setIsModalOpen(false);
   }, []);
 
-  if (!product) {
+  useEffect(() => {
+    fetchProductData();
+  }, [fetchProductData]);
+
+  // if (isLoading || isFetchingError) {
+  //   return null;
+  // }
+
+  if (!product || !updatedProduct) {
     return <div>No product found</div>;
   }
 
@@ -45,8 +94,12 @@ const Product = ({ id }: IProduct) => {
           <div className={styles.product__content}>
             <div className={styles['product__img-container']}>
               <Image src={product.img} alt={product.fullDescription.title} priority />
-              <p className={styles['product__old-price']}>{product.oldPrice}</p>
-              <p className={styles['product__new-price']}>{product.newPrice}</p>
+              <p className={styles['product__old-price']}>
+                {isLoading || isFetchingError ? 'Loading...' : updatedProduct.oldPrice}
+              </p>
+              <p className={styles['product__new-price']}>
+                {isLoading || isFetchingError ? 'Loading...' : updatedProduct.newPrice}
+              </p>
               <button className={styles['product__buy-btn']} onClick={openModal}>
                 Купити
               </button>

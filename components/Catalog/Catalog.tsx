@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { FaRegThumbsUp } from 'react-icons/fa';
 import { GoDotFill } from 'react-icons/go';
 
@@ -12,6 +12,7 @@ import img_adv from '@/assets/catalogSection/p_01.webp';
 import products from '@/data/products';
 import Modal from '../Modal/Modal';
 import UserDataForm from '../UserDataForm/UserDataForm';
+import { IsAvailable } from '@/data/types';
 
 const advantages: string[] = [
   'Доступна вартість',
@@ -22,8 +23,50 @@ const advantages: string[] = [
 ];
 
 const Catalog = () => {
+  const [updatedProducts, setUpdatedProducts] = useState(products);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isFetchingError, setIsFetchingError] = useState(false);
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [clickedProductId, setClickedProductId] = useState('');
+
+  const fetchProductsData = useCallback(async () => {
+    try {
+      const response = await fetch(
+        'https://exchange-currencies-obolon.firebaseio.com/battery.json',
+        { cache: 'no-cache' }
+      );
+      if (response.status !== 200) {
+        return setIsFetchingError(true);
+      }
+
+      const data = await response.json();
+      console.log(data);
+      const fetchedProducts = Object.values(data.products) as {
+        oldPrice: string;
+        newPrice: string;
+        id: string;
+        availability: IsAvailable;
+      }[];
+
+      const newProducts = [...products];
+
+      for (const product of newProducts) {
+        const fetchedProduct = fetchedProducts.find((prod) => prod.id === product.id);
+        if (fetchedProduct) {
+          product.oldPrice = fetchedProduct.oldPrice;
+          product.newPrice = fetchedProduct.newPrice;
+          product.simpleDescription.isAvailable = fetchedProduct.availability;
+        }
+      }
+      setUpdatedProducts(newProducts);
+
+      setIsLoading(false);
+    } catch (error) {
+      console.log(error);
+      setIsFetchingError(true);
+    }
+  }, []);
 
   const openModal = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
     const productId = e.currentTarget.getAttribute('data-id');
@@ -37,6 +80,14 @@ const Catalog = () => {
   const closeModal = useCallback(() => {
     setIsModalOpen(false);
   }, []);
+
+  useEffect(() => {
+    fetchProductsData();
+  }, [fetchProductsData]);
+
+  // if (isLoading || isFetchingError) {
+  //   return <div>Loading...</div>;
+  // }
 
   return (
     <section className={styles.catalog} id="pricing">
@@ -61,7 +112,7 @@ const Catalog = () => {
           </div>
         </article>
         <ul className={styles.catalog__products}>
-          {products.map((product) => (
+          {updatedProducts.map((product) => (
             <li key={product.simpleDescription.title} className={styles.catalog__product}>
               <Link href={product.id}>
                 <h4 className={styles['catalog__product-title']}>
@@ -73,17 +124,26 @@ const Catalog = () => {
                   <Image src={product.img} alt={product.simpleDescription.title} priority />
                 </Link>
               </div>
-              <p className={styles['catalog__old-price']}>{product.oldPrice}</p>
-              <p className={styles['catalog__new-price']}>{product.newPrice}</p>
+              <>
+                <p className={styles['catalog__old-price']}>
+                  {isLoading || isFetchingError ? 'Loading...' : product.oldPrice}
+                </p>
+                <p className={styles['catalog__new-price']}>
+                  {isLoading || isFetchingError ? 'Loading...' : product.newPrice}
+                </p>
+              </>
               <p
                 className={
                   styles['catalog__product-is-available'] +
-                  (product.simpleDescription.isAvailable
+                  (product.simpleDescription.isAvailable === IsAvailable['В наявності'] ||
+                  product.simpleDescription.isAvailable === IsAvailable.Закінчується
                     ? ` ${styles['catalog__product-is-available_available']}`
                     : ` ${styles['catalog__product-is-available_unavailable']}`)
                 }
               >
-                {product.simpleDescription.isAvailable ? 'В наявності' : 'Немає в наявності'}
+                {isLoading || isFetchingError
+                  ? 'Loading...'
+                  : product.simpleDescription.isAvailable}
               </p>
               <ul>
                 {product.simpleDescription.options.map((option) => (

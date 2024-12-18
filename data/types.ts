@@ -23,3 +23,10 @@ export interface IUserData {
   phone: string;
   productId?: string;
 }
+
+export enum IsAvailable {
+  'В наявності' = 'В наявності',
+  'Закінчується' = 'Закінчується',
+  'В дорозі' = 'В дорозі',
+  'Немає в наявності' = 'Немає в наявності'
+}

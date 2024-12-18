@@ -7,9 +7,10 @@ import { Noto_Sans_Display } from 'next/font/google';
 // import localFont from 'next/font/local';
 
 import Header from '@/components/Header/Header';
-import Notification from '@/components/Notification/Notification';
 import Feedback from '@/components/Feedback/Feedback';
 import Footer from '@/components/Footer/Footer';
+
+import { NotificationProvider } from './contex/notificationContex';
 
 import './globals.scss';
 
@@ -41,14 +42,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       {/* <body className={`${geistSans.variable} ${geistMono.variable}`}>{children}</body> */}
-      <body className={font.className}>
-        <Header />
-        <Notification />
-        {children}
-        <Analytics />
-        <Feedback />
-        <Footer />
-      </body>
+      <NotificationProvider>
+        <body className={font.className}>
+          <Header />
+          {children}
+          <Analytics />
+          <Feedback />
+          <Footer />
+        </body>
+      </NotificationProvider>
     </html>
   );
 }
