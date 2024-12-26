@@ -113,7 +113,7 @@ const Catalog = () => {
         </article>
         <ul className={styles.catalog__products}>
           {updatedProducts.map((product) => (
-            <li key={product.simpleDescription.title} className={styles.catalog__product}>
+            <li key={product.id} className={styles.catalog__product}>
               <Link href={product.id}>
                 <h4 className={styles['catalog__product-title']}>
                   {product.simpleDescription.title}

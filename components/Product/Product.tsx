@@ -125,20 +125,24 @@ const Product = ({ id }: IProduct) => {
                   </li>
                 ))}
               </ul>
-              <h4>{product.fullDescription.listSecondary.heading}</h4>
-              <ul className={styles['product__list-secondary']}>
-                {product.fullDescription.listSecondary.list.map((item) => (
-                  <li key={item.description}>
-                    <span className={styles['dot-icon']}>
-                      <GoDotFill />
-                    </span>
-                    <div>
-                      <span className={styles['li-title']}>{item.title}</span>
-                      <span> {item.description}</span>
-                    </div>
-                  </li>
-                ))}
-              </ul>
+              {product.fullDescription.listSecondary && (
+                <>
+                  <h4>{product.fullDescription.listSecondary.heading}</h4>
+                  <ul className={styles['product__list-secondary']}>
+                    {product.fullDescription.listSecondary.list.map((item) => (
+                      <li key={item.description}>
+                        <span className={styles['dot-icon']}>
+                          <GoDotFill />
+                        </span>
+                        <div>
+                          <span className={styles['li-title']}>{item.title}</span>
+                          <span> {item.description}</span>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              )}
               <p className={styles['product__description-secondary']}>
                 {product.fullDescription.descriptionSecondary.title && (
                   <span>{product.fullDescription.descriptionSecondary.title}</span>
